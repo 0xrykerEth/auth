@@ -11,7 +11,7 @@ const ProfileForm = () => {
   const submitHandler = async(e) => {
     e.preventDefault();
     try{
-      const response = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyDf8O5Y9eAbpxmlVyYzrANFJODw3EfHSwA`,{
+      const response = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:update?key=`,{
         method : 'POST',
         body : JSON.stringify({
           idToken : authCtrx.token,
