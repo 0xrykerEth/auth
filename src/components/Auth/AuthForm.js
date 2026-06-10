@@ -52,6 +52,9 @@ const AuthForm = () => {
     });
 
     const data = await response.json();
+    const expiryTime = Date.now() + (1 * 60 * 1000);
+    localStorage.setItem('expiryTime',expiryTime);
+
     authCtrx.login(data.idToken);
     if (!response.ok) {
       throw new Error(data.error.message);
